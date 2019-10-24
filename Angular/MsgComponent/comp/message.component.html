@@ -1,0 +1,25 @@
+<div id="message-container">
+  <div *ngFor="let message of listOfAllMessage">
+    <div class="message-box" [ngClass]="{
+      'success-msg': messageTypes.Success === message.type,
+      'error-msg': messageTypes.Error === message.type,
+      'info-msg': messageTypes.Info === message.type,
+      'warn-msg': messageTypes.Warning === message.type
+    }">
+      <div class="message-icon">
+        <i class="fas" [ngClass]="{
+          'fa-check-circle': messageTypes.Success === message.type,
+          'fa-times-circle': messageTypes.Error === message.type,
+          'fa-info-circle': messageTypes.Info === message.type,
+          'fa-exclamation-circle': messageTypes.Warning === message.type
+        }"></i>
+      </div>
+
+      <i class="fas "></i>
+
+      <div class="message">
+        {{message.message}}
+      </div>
+    </div>
+  </div>
+</div>
