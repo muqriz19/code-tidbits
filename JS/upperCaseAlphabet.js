@@ -14,3 +14,21 @@
     }
     return upperFLW;
   }
+
+
+  // uppercase first character
+  public upSingleChar(stringValue) {
+    const stringVal = String(stringValue);
+    let modString = '';
+    if (typeof stringValue === 'string') {
+      if (stringVal.length > 2) {
+        modString = stringVal[0].toUpperCase() + stringVal.substring(1);
+      } else {
+        modString = stringVal[0].toUpperCase();
+      }
+
+    } else {
+      throw new Error('Not a string');
+    }
+    return modString;
+  }
