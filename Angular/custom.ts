@@ -3,7 +3,7 @@ class Custom {
 
     }
 
-    // iterate reactive form and add on props and values into object stack
+    // iterate reactive form and add on props with its values
     public iterateReactiveForm(object) {
         const keys = Object.keys(object);
         let stack = {};
